@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px 10px;
+  background: #f4f4f4;
+  margin: 0;
+}
+
+#game-container {
+  background: white;
+  padding: 20px;
+  max-width: 480px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 45px;
+  font-size: 1.8rem;
+}
+
+#task-instruction {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Space below the sentence */
+#sentence-area {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+#audio-player {
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 100%;
+}
+
+#user-answer {
+  padding: 12px 10px;
+  font-size: 1.1rem;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#buttons button {
+  flex: 1 1 30%;
+  min-width: 100px;
+  padding: 12px 0;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#buttons button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+#buttons button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+#feedback {
+  margin: 15px 0;
+  font-weight: bold;
+  color: #007700;
+  min-height: 1.5em;
+  padding: 0 10px;
+}
+
+#score-box {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #d1c93a, #9a8904);
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 79, 84, 0.3);
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 15px; /* spacing from timer */
+}
+
+/* Make sure audio controls scale well */
+audio {
+  width: 100%;
+  height: 40px;
+}
+
+/* Smaller devices adjustments */
+@media (max-width: 360px) {
+  #user-answer {
+    width: 100%;
+  }
+  #buttons button {
+    min-width: 80px;
+    flex: 1 1 45%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+#start-btn {
+  background: linear-gradient(135deg, #2a9d8f, #14e34f);
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(42, 157, 143, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  display: inline-block;
+  margin: 20px auto 30px auto;
+  text-align: center;
+  min-width: 180px;
+}
+
+#start-btn:hover {
+  background: linear-gradient(135deg, #21867a, #1e3c45);
+  transform: scale(1.05);
+}
+
+#start-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px rgba(42, 157, 143, 0.7);
+}
+#sentence-area {
+  margin-top: 20px; /* space above sentence */
+}
+#timer {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(118, 75, 162, 0.3);
+  display: inline-block;
+  min-width: 150px;
+  text-align: center;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

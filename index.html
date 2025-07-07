@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Error Correction Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body>
+  <div id="game-container">
+    <h1>📝 Error Correction Game</h1>
+    
+    <button id="start-btn" style="margin-bottom: 40px;">▶️ Start Game</button>
+
+    <!-- Wrap game content in a container and hide it initially -->
+    <div id="game-content" style="display: none;">
+<div id="task-instruction" style="margin-bottom: 20px; font-weight: bold; font-size: 1.1em;">
+  Task description will appear here.
+</div>
+<div id="sentence-area">Click "Start Game" to begin.</div>
+
+      <audio id="audio-player" controls style="display: none;"></audio>
+
+      <input type="text" id="user-answer" placeholder="Type your correction here" disabled />
+
+      <div id="buttons">
+        <button id="back-btn" disabled>⬅️ Back</button>
+        <button id="submit-btn" disabled>✅ Submit</button>
+        <button id="next-btn" disabled>➡️ Next</button>
+      </div>
+
+      <div id="feedback"></div>
+      <div id="timer">⏱️ Time left: 45</div>
+      <div id="score-box">Score: <span id="score">0</span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
